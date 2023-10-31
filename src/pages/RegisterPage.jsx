@@ -6,7 +6,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import {useRegisterMutation} from "../slices/usersApiSlice.js";
 import {toast} from "react-toastify";
 import Loader from "../components/Loader.jsx";
-import {useFormik,ErrorMessage} from "formik";
+import {useFormik} from "formik";
 import registerSchema from "../Schemas/RegisterSchema.js";
 
 const RegisterPage = () => {
@@ -28,8 +28,9 @@ const RegisterPage = () => {
             validationSchema: registerSchema,
             onSubmit: async ({username, email, password,status}) => {
                 let statusC = Number(status)
-                console.log({username, email, password,statusC})
+                // console.log({username, email, password,statusC})
                 try {
+                    console.log({username,email, password,status:statusC})
                     const res = await register({username,email, password,status:statusC}).unwrap()
                     const {msg} = res
                     navigate('/login')
@@ -121,7 +122,7 @@ const RegisterPage = () => {
                         onChange={handleChange}
                         isInvalid={!!(touched.password && errors.password)}
                         errormessage={
-                            errors.password && touched.password ? errors.password : null
+                            errors.status && touched.status ? errors.status : null
                         }
                     >
                         <option value="">Are you ?</option>

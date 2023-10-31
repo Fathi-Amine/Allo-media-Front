@@ -13,6 +13,7 @@ import ProfilePage from "./pages/ProfilePage.jsx";
 import PrivateRoute from "./components/PrivateRoute.jsx";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage.jsx";
 import ResetPasswordPage from "./pages/ResetPasswordPage.jsx";
+import VerificationPage from "./pages/VerificationPage.jsx";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
             <Route index={true} path="/" element={<Home />}></Route>
             <Route path="/login" element={<LoginPage />}></Route>
             <Route path="/register" element={<RegisterPage />}></Route>
+            <Route path="/mail/verify-email" element={<VerificationPage />}></Route>
             <Route path="/forgot" element={<ForgotPasswordPage />}></Route>
             <Route path="/user/reset-password/:token/:email" element={<ResetPasswordPage />}>
             </Route>

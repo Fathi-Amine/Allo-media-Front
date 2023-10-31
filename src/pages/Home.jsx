@@ -12,7 +12,6 @@ const Home = () => {
                         <h2>Welcome, {userInfo.user.name}!</h2>
                         <p>Email: {userInfo.user.email}</p>
                         <p>Role: {userInfo.user.role}</p>
-                        {/* You can add more user-related information here */}
                     </div>
                 </div>
             ) : (

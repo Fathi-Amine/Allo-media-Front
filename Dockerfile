@@ -2,9 +2,12 @@ FROM node:18-alpine
 
 WORKDIR /app_img
 
-COPY . .
+COPY package.json .
 
 RUN npm install --force
+
+COPY . .
+
 
 EXPOSE 3000/tcp
 

@@ -65,7 +65,7 @@ const LoginPage = ()=>{
                 </Row>
                 <Row className="py-3">
                     <Col>
-                        Don't remember your password<Link to="/forgot"> Forgot</Link>
+                       Dont remember your password <Link to="/forgot"> Forgot</Link>
                     </Col>
                 </Row>
             </Form>
