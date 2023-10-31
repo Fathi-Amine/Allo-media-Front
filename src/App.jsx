@@ -1,10 +1,17 @@
 import Header from "./components/Header.jsx";
+import { Outlet} from 'react-router-dom'
+import {Container} from "react-bootstrap";
+import {ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const App = ()=>{
     return (
         <>
             <Header />
-            <h1>My App</h1>
+            <ToastContainer />
+            <Container className="my-3">
+                <Outlet />
+            </Container>
         </>
     )
 }
