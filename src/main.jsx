@@ -14,6 +14,7 @@ import PrivateRoute from "./components/PrivateRoute.jsx";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage.jsx";
 import ResetPasswordPage from "./pages/ResetPasswordPage.jsx";
 import VerificationPage from "./pages/VerificationPage.jsx";
+import UserListPage from "./pages/AllUsersPage.jsx";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
             <Route path="/user/reset-password/:token/:email" element={<ResetPasswordPage />}>
             </Route>
             <Route path="" element={<PrivateRoute />}>
+                <Route path="/users" element={<UserListPage />}></Route>
                 <Route path="/profile" element={<ProfilePage />}></Route>
             </Route>
         </Route>
